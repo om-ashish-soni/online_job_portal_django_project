@@ -1,0 +1,84 @@
+<!-- <h1>hello page</h1> -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Home</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: "Helvetica Neue",Helvetica;
+    }
+    .container{
+        margin:5%;
+        padding:5%;
+    }
+    .textlabel{
+        font-size:25px;
+    }
+    .para{
+        font-size:20px;
+        margin:1%;
+    }
+    .logo{
+        font-size:32px;
+        margin:5%;
+        color:#006192;
+        font-family: "Helvetica";
+        font-variant: small-caps ;
+    }
+    button{
+        background-color:#006192;
+        color:white;
+        outline:none;
+        border:none;
+        border-radius :10px;
+        font-size:20px;
+        padding:5px;
+        margin:10px;
+    }
+    a{
+        color:white;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="logo">
+            <center>Online Job Portal</center>
+        </div>
+        <div class="textlabel">
+            <center><h3>about us</h3></center>
+            <div class="para">
+                Welcome to online job portal, the world's greatest professional network with lots of members in more countries and territories worldwide.
+            </div>
+        </div>
+        <div class="textlabel">
+            <center><h3>Vision</h3></center>
+            <div class="para">
+                Create great opportunity for every entity of the workforce in the entire world.
+            </div>
+        </div>
+        <div class="textlabel">
+            <center><h3>Mission</h3></center>
+            <div class="para">
+                The mission of LinkedIn is simple: connect the world’s professionals to make them more productive and successful.
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="textlabel">
+            <center>    
+                <button class="textlabel"><a style="text-decoration:none;" href="login">Login</a></button>
+                <button class="textlabel"><a style="text-decoration:none;" href="signin">SignIn</a></button>
+            </center>
+        </div>
+        
+    </div>
+
+</body>
+</html>

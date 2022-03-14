@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: "Helvetica Neue",Helvetica;
+    }
+    .container{
+        margin:2%;
+        padding:5%;
+    }
+    .textlabel{
+        font-size:25px;
+    }
+    .para{
+        font-size:20px;
+        margin:1%;
+    }
+    .logo{
+        font-size:32px;
+        margin:2%;
+        color:#006192;
+        font-family: "Helvetica";
+        font-variant: small-caps ;
+    }
+    button{
+        background-color:#006192;
+        color:white;
+        outline:none;
+        border:none;
+        border-radius :10px;
+        font-size:20px;
+        padding:5px;
+        margin:10px;
+    }
+    a{
+        color:white;
+    }
+    .regform{
+        margin-top:1%;
+        margin-left:20%;
+        padding:2%;
+    }
+    input{
+        margin-top:2%;
+        font-size:15px;
+        font-variant: small-caps;
+        outline:none;
+        border:none;
+        border-bottom:1px solid black;
+        
+    }
+    .submitBtn{
+        border-radius:5px;
+        width:70%;
+        font-size:16px;
+    }
+    .switch{
+        margin-left:20%;
+        padding:2%;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="logo">
+            <center>Online Job Portal</center>
+        </div>
+        <form action="validateLogin" class="regform" method="post">
+            {% csrf_token %}
+            <input style="width:70%" type="text" name="email" placeholder="Email"/><br/>
+            <input style="width:70%" type="password" name="password" placeholder="Password"/><br/>
+            <div style="margin-top:2%;margin-bottom:2%">
+                <input type="radio" name="isHr" value="1"/>
+                <label style="width:70%" for="userType">Company</label>
+                <input type="radio" name="isHr" value="0"/>
+                <label style="width:70%" for="userType">Candidate</label>
+                <br/>
+            </div>
+            <button class="submitBtn" type="submit">login</button><br/>
+            <!-- <a href="signin">Not a user? sign in here</a><br/> -->
+        </form>
+        <div class="switch"><button class="submitBtn"><a style="text-decoration:none;" href="signin">Not a user? sign in here</a></button></div>
+    </div>
+</body>
+</html>
